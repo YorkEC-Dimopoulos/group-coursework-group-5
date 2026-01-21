@@ -1,0 +1,296 @@
+<!--
+Author: Sourvanos Vasilis
+File: vasilis.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourvanos Vasilis | Transformers Gym</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        
+        .navbar {
+            display: flex;
+            align-items: center; 
+            height: 70px;
+            background-color: grey;
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        
+        .logo {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            margin-right: 15px; 
+        }
+        .logo img {
+            height: 100%; 
+            width: auto;  
+            object-fit: contain;
+        }
+
+        .logoname {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logoname span {
+            color: #FFD700;
+        }
+
+       
+        nav {
+            margin-left: auto; 
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 0 15px;
+            height: 70px;
+            line-height: 70px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .menu li a:hover {
+            background-color: rgba(255, 215, 0, 0.2);
+            color: #FFD700;
+        }
+
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            background-color: #111;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+            z-index: 50;
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li a {
+            padding: 12px 20px;
+            text-align: left;
+            height: auto;
+            line-height: normal;
+        }
+
+       
+        #ProfileHero {
+            
+            background-image: url('../images/anastase-maragos-9dzWZQWZMdE-unsplash.jpg'); 
+            background-size: cover;
+            color: #f7f3f3;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        
+        .fling-minislide {
+            width: 50%;
+            margin: 20px auto; 
+            padding-bottom: 35%; 
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .fling-minislide img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: fling-minislide 20s infinite;
+            opacity: 0;
+        }
+
+        @keyframes fling-minislide {
+            25% { opacity: 1; }
+            40% { opacity: 0; }
+        }
+
+        .fling-minislide img:nth-child(4) { animation-delay: 0s; }
+        .fling-minislide img:nth-child(3) { animation-delay: 5s; }
+        .fling-minislide img:nth-child(2) { animation-delay: 10s; }
+        .fling-minislide img:nth-child(1) { animation-delay: 15s; }
+
+        
+        section { padding: 40px 20px; text-align: center; }
+        #about { background: #f4f4f4; color: #333; }
+        
+        
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        
+        #contact input, #contact textarea {
+            padding: 10px;
+        }
+        
+        #contact button {
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        
+        @media (max-width: 900px) {
+            .navbar { height: auto; flex-direction: column; padding-bottom: 10px; }
+            .menu { flex-direction: column; width: 100%; }
+            .menu li a { text-align: center; }
+            .dropdown-menu { position: static; width: 100%; }
+            .fling-minislide { width: 100%; padding-bottom: 60%; }
+        }
+    </style>
+</head>
+<body>
+  
+<header class="navbar">
+    <div class="logo">
+        <img src="../images/projectLogo.png" alt="Gym Logo">
+    </div>
+    <div class="logoname">TRANS<span>FORMERS</span></div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Main Page</a></li>
+            <li class="dropdown">
+                <a href="#">Activities ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./html/trex.html">T-Rex</a></li>
+                    <li><a href="./html/Pilates.html">Pilates</a></li>
+                    <li><a href="./html/groupCycling.html">Group Cycling</a></li>
+                </ul>
+            </li>
+            <li><a href="./html/me">Membership</a></li>
+            <li class="dropdown">
+                <a href="#">Schedule ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./html/scheduleTrex.html">T-Rex</a></li>
+                    <li><a href="./html/Scheduale.html">Pilates</a></li>
+                    <li><a href="./html/scheduleGroupCycling.html">Group Cycling</a></li>
+                </ul>
+            </li>
+
+            <li><a href="../html/contact.html">Contact Us</a></li>
+
+            <li class="dropdown">
+                <a href="#">Others ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/html/other-locations.html">Other Locations</a></li>
+                    <li><a href="equipments.html">Equipments</a></li>
+                    <li><a href="rules-policies.html">Rules & Policies</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+        <a href="#">About Us ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="students/personalPage.html">Persea Malaveci</a></li>
+          <li><a href="students/Tea.html">Tea Zetova</a></li>
+          <li><a href="students/vasilis.html">Vasilis Sourvanos</a></li>
+        </ul>
+      </li>
+        </ul>
+    </nav>
+</header>
+
+<section id="ProfileHero">
+    <h2>Sourvanos Vasilis</h2>
+    
+    
+
+    <div class="content">  
+        <h3>Trainer & Enthusiast</h3>
+        <p>Fitness • Motorcycles • Music</p>
+    </div>
+</section>
+    
+<section id="about">
+    <h2>About Vasilis</h2>
+    <p>Sourvanos Vasilis is a core part of the Transformers Gym family.<br>
+    His life is defined by three passions: the discipline of the <strong>Gym</strong>, <br>
+    the freedom of riding <strong>Motorcycles</strong>, and the energy of <strong>Music</strong>.<br><br>
+    He brings the same intensity from the road and the rhythm of music <br>
+    into every training session, helping others achieve their best self.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Vasilis</h2>
+    <p>Want to book a session? Reach out at <a href="mailto:vasilis@transformersgym.com">vasilis@transformersgym.com</a>.</p>
+    
+    <form action="mailto:vasilis@transformersgym.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</section> 
+
+<footer>
+    <div class="footer-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+    </div>
+    <p>&copy; 2025 Transformers Gym. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
